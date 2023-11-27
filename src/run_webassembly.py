@@ -13,8 +13,8 @@ class CustomHTTPRequestHandler(SimpleHTTPRequestHandler):
 
 with HTTPServer(("", PORT), CustomHTTPRequestHandler) as httpd:
     try:
-        webbrowser.open("http://localhost:%s" % PORT)
-        print("Serving on http://localhost:%s" % PORT)
+        webbrowser.open("http://localhost:%s/build-web" % PORT)
+        print("Serving on http://localhost:%s/build-web" % PORT)
         httpd.serve_forever()
     finally:
         sys.exit(0)
