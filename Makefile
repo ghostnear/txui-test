@@ -4,11 +4,11 @@ clean:
 	@rm -rf build*/
 
 build:
-	@cmake -S . -B build/
+	@cmake -S . -B build/ -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 	@cmake --build build/
 
 build-web:
-	@emcmake cmake -S . -B build-web/
+	@emcmake cmake -S . -B build-web/ -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 	@cmake --build build-web/
 
 run-web:
